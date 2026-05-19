@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CashFrame â€” Intelligence for Funded Traders</title>
-<meta name="description" content="The prop trading briefing serious traders read. Firm reviews, rule changes, payout news, and strategy â€” delivered twice a week.">
-<meta property="og:title" content="CashFrame â€” Intelligence for Funded Traders">
+<title>CashFrame &mdash; Intelligence for Funded Traders</title>
+<meta name="description" content="The prop trading briefing serious traders read. Firm reviews, rule changes, payout news, and strategy &mdash; delivered daily.">
+<meta property="og:title" content="CashFrame &mdash; Intelligence for Funded Traders">
 <meta property="og:description" content="Prop firm reviews, rule changes, payout news, and strategy. Join 1,000+ funded traders.">
 <meta property="og:url" content="https://thecashframe.com">
 <meta property="og:type" content="website">
@@ -31,7 +31,7 @@
   .hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:100px 24px 80px; text-align:center; position:relative; overflow:hidden; }
   .hero::before { content:''; position:absolute; top:-200px; left:50%; transform:translateX(-50%); width:800px; height:800px; background:radial-gradient(circle,rgba(16,185,129,0.12) 0%,transparent 70%); pointer-events:none; }
   .badge { display:inline-flex; align-items:center; gap:8px; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); color:var(--emerald-bright); padding:6px 16px; border-radius:100px; font-size:13px; font-weight:600; margin-bottom:32px; letter-spacing:0.5px; }
-  .badge::before { content:'â—'; color:var(--emerald-bright); font-size:8px; }
+  .badge::before { content:'\25CF'; color:var(--emerald-bright); font-size:8px; }
   h1 { font-family:'Inter Tight',sans-serif; font-size:clamp(40px,7vw,76px); font-weight:800; line-height:1.05; letter-spacing:-2px; margin-bottom:24px; max-width:900px; }
   h1 em { font-style:normal; color:var(--emerald); }
   .hero-sub { font-size:clamp(17px,2.5vw,21px); color:var(--text-muted); max-width:600px; margin-bottom:48px; line-height:1.5; }
@@ -60,7 +60,7 @@
   .pillars-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
   .pillar-card { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:28px; transition:border-color 0.2s,background 0.2s; }
   .pillar-card:hover { border-color:rgba(16,185,129,0.4); background:var(--bg-card-hover); }
-  .pillar-icon { font-size:28px; margin-bottom:16px; }
+  .pillar-icon { width:44px; height:44px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800; margin-bottom:16px; background:rgba(16,185,129,0.12); color:var(--emerald); }
   .pillar-title { font-size:18px; font-weight:700; margin-bottom:10px; color:var(--text); }
   .pillar-desc { font-size:14px; color:var(--text-dim); line-height:1.6; }
   .sample-section { background:var(--bg-card); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
@@ -103,29 +103,29 @@
 </style>
 </head>
 <body>
-<nav><div class="nav-inner"><a href="/" class="logo">Cash<span>Frame</span></a><a href="#subscribe" class="nav-cta">Subscribe Free â†’</a></div></nav>
+<nav><div class="nav-inner"><a href="/" class="logo">Cash<span>Frame</span></a><a href="#subscribe" class="nav-cta">Subscribe Free &rarr;</a></div></nav>
 <section class="hero">
-  <div class="badge">Twice-weekly newsletter for funded traders</div>
+  <div class="badge">Daily newsletter for funded traders</div>
   <h1>The prop trading briefing<br><em>serious traders read.</em></h1>
-  <p class="hero-sub">Firm reviews. Rule changes. Payout news. Strategy. Everything happening in the funded trading world â€” cut down to what actually matters.</p>
+  <p class="hero-sub">Firm reviews. Rule changes. Payout news. Strategy. Everything happening in the funded trading world &mdash; cut down to what actually matters.</p>
   <div class="signup-box" id="subscribe">
     <p class="signup-label">Join 1,000+ funded and pre-funded traders:</p>
     <form class="signup-form" onsubmit="handleSubmit(event)">
       <input type="email" placeholder="your@email.com" required id="heroEmail">
-      <button type="submit" class="btn-primary">Get the Brief â†’</button>
+      <button type="submit" class="btn-primary">Get the Brief &rarr;</button>
     </form>
     <p class="signup-meta">Free forever. No spam. <strong>Unsubscribe anytime.</strong></p>
   </div>
   <div class="social-proof">
-    <div class="proof-item"><span class="check">âœ“</span> No guru hype</div>
-    <div class="proof-item"><span class="check">âœ“</span> Independent firm reviews</div>
-    <div class="proof-item"><span class="check">âœ“</span> Real payout data</div>
-    <div class="proof-item"><span class="check">âœ“</span> Delivered 2x/week</div>
+    <div class="proof-item"><span class="check">&#10003;</span> No guru hype</div>
+    <div class="proof-item"><span class="check">&#10003;</span> Independent firm reviews</div>
+    <div class="proof-item"><span class="check">&#10003;</span> Real payout data</div>
+    <div class="proof-item"><span class="check">&#10003;</span> Delivered daily</div>
   </div>
 </section>
 <div class="stats-bar"><div class="stats-inner">
-  <div><div class="stat-num">25+</div><div class="stat-label">Firms tracked & reviewed</div></div>
-  <div><div class="stat-num">2x</div><div class="stat-label">Weekly issues delivered</div></div>
+  <div><div class="stat-num">25+</div><div class="stat-label">Firms tracked &amp; reviewed</div></div>
+  <div><div class="stat-num">Daily</div><div class="stat-label">Issues delivered</div></div>
   <div><div class="stat-num">$261M+</div><div class="stat-label">Tracked in trader payouts</div></div>
   <div><div class="stat-num">0</div><div class="stat-label">Paid firm promotions</div></div>
 </div></div>
@@ -134,28 +134,28 @@
   <h2 class="section-title">The intelligence layer<br>the forums don't have.</h2>
   <p class="section-sub">CashFrame does the research so you don't have to dig through Reddit threads for 3 hours.</p>
   <div class="pillars-grid">
-    <div class="pillar-card"><div class="pillar-icon">ðŸ¢</div><div class="pillar-title">Firm Intelligence</div><div class="pillar-desc">Independent reviews of the top 25 prop firms. Rule changes tracked in real time. Payout delays called out the moment they happen.</div></div>
-    <div class="pillar-card"><div class="pillar-icon">ðŸ“Š</div><div class="pillar-title">Side-by-Side Comparisons</div><div class="pillar-desc">Evaluation fees, drawdown rules, profit splits, and payout speeds â€” all in one table. Know exactly what you're buying before you buy it.</div></div>
-    <div class="pillar-card"><div class="pillar-icon">ðŸŽ¯</div><div class="pillar-title">Passing Strategy</div><div class="pillar-desc">Risk rules decoded. Consistency rule explained. Real frameworks from traders who passed â€” not theory from people who haven't.</div></div>
-    <div class="pillar-card"><div class="pillar-icon">ðŸ’°</div><div class="pillar-title">Money & Business</div><div class="pillar-desc">How to run prop trading as a real income stream. Scaling across firms. Tax basics. Compounding from one funded account to many.</div></div>
+    <div class="pillar-card"><div class="pillar-icon">&#9632;</div><div class="pillar-title">Firm Intelligence</div><div class="pillar-desc">Independent reviews of the top 25 prop firms. Rule changes tracked in real time. Payout delays called out the moment they happen.</div></div>
+    <div class="pillar-card"><div class="pillar-icon">&#9656;</div><div class="pillar-title">Side-by-Side Comparisons</div><div class="pillar-desc">Evaluation fees, drawdown rules, profit splits, and payout speeds &mdash; all in one table. Know exactly what you're buying before you buy it.</div></div>
+    <div class="pillar-card"><div class="pillar-icon">&#10003;</div><div class="pillar-title">Passing Strategy</div><div class="pillar-desc">Risk rules decoded. Consistency rule explained. Real frameworks from traders who passed &mdash; not theory from people who haven't.</div></div>
+    <div class="pillar-card"><div class="pillar-icon">$</div><div class="pillar-title">Money &amp; Business</div><div class="pillar-desc">How to run prop trading as a real income stream. Scaling across firms. Tax basics. Compounding from one funded account to many.</div></div>
   </div>
 </div></section>
 <section class="sample-section"><div class="section-inner">
   <div class="section-label" style="text-align:center;">Sample Issue</div>
   <h2 class="section-title" style="text-align:center;margin-bottom:40px;">See what lands in your inbox.</h2>
   <div class="sample-newsletter">
-    <div class="nl-header"><div class="nl-logo">Cash<span>Frame</span></div><div class="nl-meta">Issue #3 Â· May 2026<br>2 min read</div></div>
+    <div class="nl-header"><div class="nl-logo">Cash<span>Frame</span></div><div class="nl-meta">Issue #3 &middot; May 2026<br>2 min read</div></div>
     <div class="nl-body">
-      <div class="nl-subject">âš¡ Apex just changed its drawdown rules. Here's what funded traders need to know.</div>
-      <p class="nl-text">Apex Trader Funding updated its EOD trailing drawdown calculation last week â€” and if you have an active funded account, the change affects your max contract size. Here's the short version:</p>
+      <div class="nl-subject">&#9889; Apex just changed its drawdown rules. Here's what funded traders need to know.</div>
+      <p class="nl-text">Apex Trader Funding updated its EOD trailing drawdown calculation last week &mdash; and if you have an active funded account, the change affects your max contract size. Here's the short version:</p>
       <table class="nl-table">
         <tr><th>Account</th><th>Old Max Draw</th><th>New Max Draw</th><th>Impact</th></tr>
-        <tr><td>$50K</td><td>$2,500 trail</td><td>$2,200 trail</td><td>âš ï¸ Tighter</td></tr>
-        <tr><td>$100K</td><td>$3,000 trail</td><td>$3,000 trail</td><td>âœ“ No change</td></tr>
-        <tr><td>$150K</td><td>$4,500 trail</td><td>$4,500 trail</td><td>âœ“ No change</td></tr>
+        <tr><td>$50K</td><td>$2,500 trail</td><td>$2,200 trail</td><td>&#9888; Tighter</td></tr>
+        <tr><td>$100K</td><td>$3,000 trail</td><td>$3,000 trail</td><td>&#10003; No change</td></tr>
+        <tr><td>$150K</td><td>$4,500 trail</td><td>$4,500 trail</td><td>&#10003; No change</td></tr>
       </table>
       <p class="nl-text">Bottom line: $50K account holders should reduce position size by 1 contract until you clear the 12% profit milestone.</p>
-      <div class="nl-cta-box"><p class="nl-cta-text">Want the full breakdown + our current Apex vs Topstep recommendation?</p><a href="#subscribe" class="nl-cta-btn">Read the Full Issue â†’</a></div>
+      <div class="nl-cta-box"><p class="nl-cta-text">Want the full breakdown + our current Apex vs Topstep recommendation?</p><a href="#subscribe" class="nl-cta-btn">Read the Full Issue &rarr;</a></div>
     </div>
   </div>
 </div></section>
@@ -164,25 +164,25 @@
   <h2 class="section-title">25 firms. Zero bias.</h2>
   <p class="section-sub">We track every major prop firm so you always know who's paying, who's stalling, and who to avoid.</p>
   <div class="firms-grid">
-    <div class="firm-card"><div class="firm-name">Apex Trader Funding</div><span class="firm-tag futures">Futures</span><div class="firm-split">90/10 split Â· Weekly payouts</div></div>
-    <div class="firm-card"><div class="firm-name">Topstep</div><span class="firm-tag futures">Futures</span><div class="firm-split">90/10 split Â· Weekly payouts</div></div>
-    <div class="firm-card"><div class="firm-name">FTMO</div><span class="firm-tag forex">Forex</span><div class="firm-split">Up to 90% Â· Fee refunded</div></div>
-    <div class="firm-card"><div class="firm-name">The5ers</div><span class="firm-tag forex">Forex</span><div class="firm-split">Scale to $4M Â· Lifetime</div></div>
-    <div class="firm-card"><div class="firm-name">FundedNext</div><span class="firm-tag futures">Futures</span><div class="firm-split">Up to 100% Â· 24hr payout</div></div>
-    <div class="firm-card"><div class="firm-name">My Funded Futures</div><span class="firm-tag futures">Futures</span><div class="firm-split">100% at milestone Â· 1-min pay</div></div>
-    <div class="firm-card"><div class="firm-name">Earn2Trade</div><span class="firm-tag futures">Futures</span><div class="firm-split">80/20 â†’ 100% Â· Incl. education</div></div>
-    <div class="firm-card"><div class="firm-name">E8 Markets</div><span class="firm-tag forex">Forex</span><div class="firm-split">Up to $400K Â· Weekly payouts</div></div>
-    <div class="firm-card"><div class="firm-name">Tradeify</div><span class="firm-tag futures">Futures</span><div class="firm-split">90/10 Â· $0 activation fee</div></div>
+    <div class="firm-card"><div class="firm-name">Apex Trader Funding</div><span class="firm-tag futures">Futures</span><div class="firm-split">90/10 split &middot; Weekly payouts</div></div>
+    <div class="firm-card"><div class="firm-name">Topstep</div><span class="firm-tag futures">Futures</span><div class="firm-split">90/10 split &middot; Weekly payouts</div></div>
+    <div class="firm-card"><div class="firm-name">FTMO</div><span class="firm-tag forex">Forex</span><div class="firm-split">Up to 90% &middot; Fee refunded</div></div>
+    <div class="firm-card"><div class="firm-name">The5ers</div><span class="firm-tag forex">Forex</span><div class="firm-split">Scale to $4M &middot; Lifetime</div></div>
+    <div class="firm-card"><div class="firm-name">FundedNext</div><span class="firm-tag futures">Futures</span><div class="firm-split">Up to 100% &middot; 24hr payout</div></div>
+    <div class="firm-card"><div class="firm-name">My Funded Futures</div><span class="firm-tag futures">Futures</span><div class="firm-split">100% at milestone &middot; 1-min pay</div></div>
+    <div class="firm-card"><div class="firm-name">Earn2Trade</div><span class="firm-tag futures">Futures</span><div class="firm-split">80/20 &rarr; 100% &middot; Incl. education</div></div>
+    <div class="firm-card"><div class="firm-name">E8 Markets</div><span class="firm-tag forex">Forex</span><div class="firm-split">Up to $400K &middot; Weekly payouts</div></div>
+    <div class="firm-card"><div class="firm-name">Tradeify</div><span class="firm-tag futures">Futures</span><div class="firm-split">90/10 &middot; $0 activation fee</div></div>
     <div class="firm-card"><div class="firm-name">+ 16 More Firms</div><span class="firm-tag futures">All covered</span><div class="firm-split">Subscribe for full tracking</div></div>
   </div>
 </div></section>
 <section class="cta-section">
   <div class="section-label">Join CashFrame</div>
   <h2 class="cta-title">Stop guessing.<br>Start knowing.</h2>
-  <p class="cta-sub">Free, twice a week. The prop trading briefing serious traders actually read.</p>
+  <p class="cta-sub">Free, daily. The prop trading briefing serious traders actually read.</p>
   <form class="cta-form" onsubmit="handleSubmit(event)">
     <input type="email" placeholder="your@email.com" required id="ctaEmail">
-    <button type="submit" class="btn-primary">Subscribe Free â†’</button>
+    <button type="submit" class="btn-primary">Subscribe Free &rarr;</button>
   </form>
   <p style="font-size:13px;color:var(--text-dim);">Join 1,000+ funded and pre-funded traders. No spam, ever.</p>
 </section>
@@ -193,7 +193,7 @@
     <a href="https://youtube.com/@TheCashFrame" target="_blank">YouTube</a>
     <a href="#subscribe">Subscribe</a>
   </div>
-  <p class="footer-disclaimer">CashFrame may earn affiliate commissions when you sign up for prop firms through our links. This does not affect our editorial independence â€” all firm reviews are based on independent research. Trading involves significant risk of loss. Past performance is not indicative of future results. CashFrame is not a registered investment advisor. Nothing in this newsletter constitutes investment advice.</p>
+  <p class="footer-disclaimer">CashFrame may earn affiliate commissions when you sign up for prop firms through our links. This does not affect our editorial independence &mdash; all firm reviews are based on independent research. Trading involves significant risk of loss. Past performance is not indicative of future results. CashFrame is not a registered investment advisor. Nothing in this newsletter constitutes investment advice.</p>
 </div></footer>
 <script>
 function handleSubmit(e) {
