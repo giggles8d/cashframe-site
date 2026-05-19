@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CashFrame â€” Intelligence for Funded Traders</title>
+<meta name="description" content="The prop trading briefing serious traders read. Firm reviews, rule changes, payout news, and strategy â€” delivered twice a week.">
+<meta property="og:title" content="CashFrame â€” Intelligence for Funded Traders">
+<meta property="og:description" content="Prop firm reviews, rule changes, payout news, and strategy. Join 1,000+ funded traders.">
+<meta property="og:url" content="https://thecashframe.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green-dark: #0F3D2E; --green-mid: #155C44; --emerald: #10B981;
+    --emerald-bright: #34D399; --bg: #080C0B; --bg-card: #0F1A16;
+    --bg-card-hover: #162318; --text: #F0FDF4; --text-muted: #86EFAC;
+    --text-dim: #6B7280; --amber: #F59E0B; --border: rgba(16,185,129,0.15);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+  nav { position:fixed; top:0; width:100%; z-index:100; background:rgba(8,12,11,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 24px; }
+  .nav-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:64px; }
+  .logo { font-family:'Inter Tight',sans-serif; font-size:20px; font-weight:800; color:var(--text); text-decoration:none; letter-spacing:-0.5px; }
+  .logo span { color:var(--emerald); }
+  .nav-cta { background:var(--emerald); color:#000; border:none; padding:10px 20px; border-radius:8px; font-weight:700; font-size:14px; cursor:pointer; text-decoration:none; transition:background 0.2s; }
+  .nav-cta:hover { background:var(--emerald-bright); }
+  .hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:100px 24px 80px; text-align:center; position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; top:-200px; left:50%; transform:translateX(-50%); width:800px; height:800px; background:radial-gradient(circle,rgba(16,185,129,0.12) 0%,transparent 70%); pointer-events:none; }
+  .badge { display:inline-flex; align-items:center; gap:8px; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); color:var(--emerald-bright); padding:6px 16px; border-radius:100px; font-size:13px; font-weight:600; margin-bottom:32px; letter-spacing:0.5px; }
+  .badge::before { content:'â—'; color:var(--emerald-bright); font-size:8px; }
+  h1 { font-family:'Inter Tight',sans-serif; font-size:clamp(40px,7vw,76px); font-weight:800; line-height:1.05; letter-spacing:-2px; margin-bottom:24px; max-width:900px; }
+  h1 em { font-style:normal; color:var(--emerald); }
+  .hero-sub { font-size:clamp(17px,2.5vw,21px); color:var(--text-muted); max-width:600px; margin-bottom:48px; line-height:1.5; }
+  .signup-box { background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:40px; width:100%; max-width:520px; margin-bottom:24px; }
+  .signup-label { font-size:14px; color:var(--text-muted); margin-bottom:16px; font-weight:500; }
+  .signup-form { display:flex; gap:12px; margin-bottom:16px; }
+  .signup-form input { flex:1; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:14px 18px; color:var(--text); font-size:15px; font-family:inherit; outline:none; transition:border-color 0.2s; }
+  .signup-form input:focus { border-color:var(--emerald); }
+  .signup-form input::placeholder { color:var(--text-dim); }
+  .btn-primary { background:var(--emerald); color:#000; border:none; padding:14px 24px; border-radius:10px; font-weight:700; font-size:15px; cursor:pointer; white-space:nowrap; transition:background 0.2s,transform 0.1s; font-family:inherit; }
+  .btn-primary:hover { background:var(--emerald-bright); transform:translateY(-1px); }
+  .signup-meta { font-size:12px; color:var(--text-dim); text-align:center; }
+  .signup-meta strong { color:var(--emerald-bright); }
+  .social-proof { display:flex; gap:32px; align-items:center; justify-content:center; flex-wrap:wrap; margin-top:16px; }
+  .proof-item { display:flex; align-items:center; gap:8px; font-size:14px; color:var(--text-dim); }
+  .proof-item .check { color:var(--emerald); font-weight:700; }
+  .stats-bar { background:var(--green-dark); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:32px 24px; }
+  .stats-inner { max-width:900px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center; }
+  .stat-num { font-family:'Inter Tight',sans-serif; font-size:36px; font-weight:800; color:var(--emerald); line-height:1; margin-bottom:6px; }
+  .stat-label { font-size:13px; color:var(--text-muted); font-weight:500; }
+  section { padding:96px 24px; }
+  .section-inner { max-width:1100px; margin:0 auto; }
+  .section-label { font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--emerald); margin-bottom:16px; }
+  .section-title { font-family:'Inter Tight',sans-serif; font-size:clamp(28px,4vw,48px); font-weight:800; line-height:1.1; letter-spacing:-1px; margin-bottom:16px; }
+  .section-sub { font-size:18px; color:var(--text-muted); max-width:600px; line-height:1.5; margin-bottom:56px; }
+  .pillars-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+  .pillar-card { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:28px; transition:border-color 0.2s,background 0.2s; }
+  .pillar-card:hover { border-color:rgba(16,185,129,0.4); background:var(--bg-card-hover); }
+  .pillar-icon { font-size:28px; margin-bottom:16px; }
+  .pillar-title { font-size:18px; font-weight:700; margin-bottom:10px; color:var(--text); }
+  .pillar-desc { font-size:14px; color:var(--text-dim); line-height:1.6; }
+  .sample-section { background:var(--bg-card); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+  .sample-newsletter { background:var(--bg); border:1px solid var(--border); border-radius:16px; overflow:hidden; max-width:680px; margin:0 auto; }
+  .nl-header { background:var(--green-dark); padding:28px 32px; display:flex; align-items:center; justify-content:space-between; }
+  .nl-logo { font-family:'Inter Tight',sans-serif; font-size:20px; font-weight:800; }
+  .nl-logo span { color:var(--emerald); }
+  .nl-meta { font-size:12px; color:var(--text-muted); text-align:right; }
+  .nl-body { padding:32px; }
+  .nl-subject { font-size:22px; font-weight:700; margin-bottom:20px; line-height:1.3; }
+  .nl-text { font-size:15px; color:var(--text-muted); line-height:1.7; margin-bottom:20px; }
+  .nl-table { width:100%; border-collapse:collapse; font-size:13px; margin-bottom:24px; }
+  .nl-table th { text-align:left; color:var(--emerald); font-weight:600; padding:8px 12px; border-bottom:1px solid var(--border); }
+  .nl-table td { padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.04); color:var(--text-muted); }
+  .nl-cta-box { background:rgba(16,185,129,0.07); border:1px solid rgba(16,185,129,0.2); border-radius:10px; padding:20px; text-align:center; }
+  .nl-cta-text { font-size:14px; color:var(--text-muted); margin-bottom:12px; }
+  .nl-cta-btn { display:inline-block; background:var(--emerald); color:#000; padding:10px 24px; border-radius:8px; font-weight:700; font-size:14px; text-decoration:none; }
+  .firms-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-top:40px; }
+  .firm-card { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:20px; text-align:center; transition:border-color 0.2s; }
+  .firm-card:hover { border-color:rgba(16,185,129,0.3); }
+  .firm-name { font-size:15px; font-weight:700; margin-bottom:6px; }
+  .firm-tag { display:inline-block; font-size:11px; padding:3px 10px; border-radius:100px; font-weight:600; }
+  .firm-tag.futures { background:rgba(16,185,129,0.1); color:var(--emerald); }
+  .firm-tag.forex { background:rgba(245,158,11,0.1); color:var(--amber); }
+  .firm-split { font-size:13px; color:var(--text-dim); margin-top:10px; }
+  .cta-section { text-align:center; padding:96px 24px; position:relative; overflow:hidden; }
+  .cta-title { font-family:'Inter Tight',sans-serif; font-size:clamp(32px,5vw,56px); font-weight:800; letter-spacing:-1.5px; margin-bottom:20px; line-height:1.1; }
+  .cta-sub { font-size:18px; color:var(--text-muted); margin-bottom:40px; max-width:500px; margin-left:auto; margin-right:auto; }
+  .cta-form { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; max-width:480px; margin:0 auto 20px; }
+  .cta-form input { flex:1; min-width:220px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:14px 18px; color:var(--text); font-size:15px; font-family:inherit; outline:none; transition:border-color 0.2s; }
+  footer { border-top:1px solid var(--border); padding:40px 24px; text-align:center; }
+  .footer-inner { max-width:800px; margin:0 auto; }
+  .footer-logo { font-family:'Inter Tight',sans-serif; font-size:18px; font-weight:800; margin-bottom:16px; }
+  .footer-logo span { color:var(--emerald); }
+  .footer-links { display:flex; gap:24px; justify-content:center; flex-wrap:wrap; margin-bottom:24px; }
+  .footer-links a { color:var(--text-dim); text-decoration:none; font-size:14px; transition:color 0.2s; }
+  .footer-links a:hover { color:var(--emerald); }
+  .footer-disclaimer { font-size:12px; color:var(--text-dim); line-height:1.6; max-width:680px; margin:0 auto; }
+  @media (max-width:640px) { .stats-inner{grid-template-columns:repeat(2,1fr);} .signup-form{flex-direction:column;} .nl-header{flex-direction:column;gap:12px;text-align:center;} h1{letter-spacing:-1px;} }
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="/" class="logo">Cash<span>Frame</span></a><a href="#subscribe" class="nav-cta">Subscribe Free â†’</a></div></nav>
+<section class="hero">
+  <div class="badge">Twice-weekly newsletter for funded traders</div>
+  <h1>The prop trading briefing<br><em>serious traders read.</em></h1>
+  <p class="hero-sub">Firm reviews. Rule changes. Payout news. Strategy. Everything happening in the funded trading world â€” cut down to what actually matters.</p>
+  <div class="signup-box" id="subscribe">
+    <p class="signup-label">Join 1,000+ funded and pre-funded traders:</p>
+    <form class="signup-form" onsubmit="handleSubmit(event)">
+      <input type="email" placeholder="your@email.com" required id="heroEmail">
+      <button type="submit" class="btn-primary">Get the Brief â†’</button>
+    </form>
+    <p class="signup-meta">Free forever. No spam. <strong>Unsubscribe anytime.</strong></p>
+  </div>
+  <div class="social-proof">
+    <div class="proof-item"><span class="check">âœ“</span> No guru hype</div>
+    <div class="proof-item"><span class="check">âœ“</span> Independent firm reviews</div>
+    <div class="proof-item"><span class="check">âœ“</span> Real payout data</div>
+    <div class="proof-item"><span class="check">âœ“</span> Delivered 2x/week</div>
+  </div>
+</section>
+<div class="stats-bar"><div class="stats-inner">
+  <div><div class="stat-num">25+</div><div class="stat-label">Firms tracked & reviewed</div></div>
+  <div><div class="stat-num">2x</div><div class="stat-label">Weekly issues delivered</div></div>
+  <div><div class="stat-num">$261M+</div><div class="stat-label">Tracked in trader payouts</div></div>
+  <div><div class="stat-num">0</div><div class="stat-label">Paid firm promotions</div></div>
+</div></div>
+<section><div class="section-inner">
+  <div class="section-label">What's Inside</div>
+  <h2 class="section-title">The intelligence layer<br>the forums don't have.</h2>
+  <p class="section-sub">CashFrame does the research so you don't have to dig through Reddit threads for 3 hours.</p>
+  <div class="pillars-grid">
+    <div class="pillar-card"><div class="pillar-icon">ðŸ¢</div><div class="pillar-title">Firm Intelligence</div><div class="pillar-desc">Independent reviews of the top 25 prop firms. Rule changes tracked in real time. Payout delays called out the moment they happen.</div></div>
+    <div class="pillar-card"><div class="pillar-icon">ðŸ“Š</div><div class="pillar-title">Side-by-Side Comparisons</div><div class="pillar-desc">Evaluation fees, drawdown rules, profit splits, and payout speeds â€” all in one table. Know exactly what you're buying before you buy it.</div></div>
+    <div class="pillar-card"><div class="pillar-icon">ðŸŽ¯</div><div class="pillar-title">Passing Strategy</div><div class="pillar-desc">Risk rules decoded. Consistency rule explained. Real frameworks from traders who passed â€” not theory from people who haven't.</div></div>
+    <div class="pillar-card"><div class="pillar-icon">ðŸ’°</div><div class="pillar-title">Money & Business</div><div class="pillar-desc">How to run prop trading as a real income stream. Scaling across firms. Tax basics. Compounding from one funded account to many.</div></div>
+  </div>
+</div></section>
+<section class="sample-section"><div class="section-inner">
+  <div class="section-label" style="text-align:center;">Sample Issue</div>
+  <h2 class="section-title" style="text-align:center;margin-bottom:40px;">See what lands in your inbox.</h2>
+  <div class="sample-newsletter">
+    <div class="nl-header"><div class="nl-logo">Cash<span>Frame</span></div><div class="nl-meta">Issue #3 Â· May 2026<br>2 min read</div></div>
+    <div class="nl-body">
+      <div class="nl-subject">âš¡ Apex just changed its drawdown rules. Here's what funded traders need to know.</div>
+      <p class="nl-text">Apex Trader Funding updated its EOD trailing drawdown calculation last week â€” and if you have an active funded account, the change affects your max contract size. Here's the short version:</p>
+      <table class="nl-table">
+        <tr><th>Account</th><th>Old Max Draw</th><th>New Max Draw</th><th>Impact</th></tr>
+        <tr><td>$50K</td><td>$2,500 trail</td><td>$2,200 trail</td><td>âš ï¸ Tighter</td></tr>
+        <tr><td>$100K</td><td>$3,000 trail</td><td>$3,000 trail</td><td>âœ“ No change</td></tr>
+        <tr><td>$150K</td><td>$4,500 trail</td><td>$4,500 trail</td><td>âœ“ No change</td></tr>
+      </table>
+      <p class="nl-text">Bottom line: $50K account holders should reduce position size by 1 contract until you clear the 12% profit milestone.</p>
+      <div class="nl-cta-box"><p class="nl-cta-text">Want the full breakdown + our current Apex vs Topstep recommendation?</p><a href="#subscribe" class="nl-cta-btn">Read the Full Issue â†’</a></div>
+    </div>
+  </div>
+</div></section>
+<section><div class="section-inner">
+  <div class="section-label">Coverage</div>
+  <h2 class="section-title">25 firms. Zero bias.</h2>
+  <p class="section-sub">We track every major prop firm so you always know who's paying, who's stalling, and who to avoid.</p>
+  <div class="firms-grid">
+    <div class="firm-card"><div class="firm-name">Apex Trader Funding</div><span class="firm-tag futures">Futures</span><div class="firm-split">90/10 split Â· Weekly payouts</div></div>
+    <div class="firm-card"><div class="firm-name">Topstep</div><span class="firm-tag futures">Futures</span><div class="firm-split">90/10 split Â· Weekly payouts</div></div>
+    <div class="firm-card"><div class="firm-name">FTMO</div><span class="firm-tag forex">Forex</span><div class="firm-split">Up to 90% Â· Fee refunded</div></div>
+    <div class="firm-card"><div class="firm-name">The5ers</div><span class="firm-tag forex">Forex</span><div class="firm-split">Scale to $4M Â· Lifetime</div></div>
+    <div class="firm-card"><div class="firm-name">FundedNext</div><span class="firm-tag futures">Futures</span><div class="firm-split">Up to 100% Â· 24hr payout</div></div>
+    <div class="firm-card"><div class="firm-name">My Funded Futures</div><span class="firm-tag futures">Futures</span><div class="firm-split">100% at milestone Â· 1-min pay</div></div>
+    <div class="firm-card"><div class="firm-name">Earn2Trade</div><span class="firm-tag futures">Futures</span><div class="firm-split">80/20 â†’ 100% Â· Incl. education</div></div>
+    <div class="firm-card"><div class="firm-name">E8 Markets</div><span class="firm-tag forex">Forex</span><div class="firm-split">Up to $400K Â· Weekly payouts</div></div>
+    <div class="firm-card"><div class="firm-name">Tradeify</div><span class="firm-tag futures">Futures</span><div class="firm-split">90/10 Â· $0 activation fee</div></div>
+    <div class="firm-card"><div class="firm-name">+ 16 More Firms</div><span class="firm-tag futures">All covered</span><div class="firm-split">Subscribe for full tracking</div></div>
+  </div>
+</div></section>
+<section class="cta-section">
+  <div class="section-label">Join CashFrame</div>
+  <h2 class="cta-title">Stop guessing.<br>Start knowing.</h2>
+  <p class="cta-sub">Free, twice a week. The prop trading briefing serious traders actually read.</p>
+  <form class="cta-form" onsubmit="handleSubmit(event)">
+    <input type="email" placeholder="your@email.com" required id="ctaEmail">
+    <button type="submit" class="btn-primary">Subscribe Free â†’</button>
+  </form>
+  <p style="font-size:13px;color:var(--text-dim);">Join 1,000+ funded and pre-funded traders. No spam, ever.</p>
+</section>
+<footer><div class="footer-inner">
+  <div class="footer-logo">Cash<span>Frame</span></div>
+  <div class="footer-links">
+    <a href="mailto:contact@thecashframe.com">Contact</a>
+    <a href="https://youtube.com/@TheCashFrame" target="_blank">YouTube</a>
+    <a href="#subscribe">Subscribe</a>
+  </div>
+  <p class="footer-disclaimer">CashFrame may earn affiliate commissions when you sign up for prop firms through our links. This does not affect our editorial independence â€” all firm reviews are based on independent research. Trading involves significant risk of loss. Past performance is not indicative of future results. CashFrame is not a registered investment advisor. Nothing in this newsletter constitutes investment advice.</p>
+</div></footer>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  var email = document.getElementById('heroEmail') ? document.getElementById('heroEmail').value : document.getElementById('ctaEmail').value;
+  window.location.href = 'https://cashframe.beehiiv.com/subscribe?email=' + encodeURIComponent(email);
+}
+</script>
+</body>
+</html>
