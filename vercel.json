@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/og.png", "destination": "https://i.ytimg.com/vi/Vn-I40H7PKk/maxresdefault.jpg", "permanent": false }
+  ]
+}
